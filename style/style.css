@@ -1,0 +1,377 @@
+ 
+body {
+    font-family: Arial;
+    font-size: 17px;
+}
+
+img{
+    height: 250px;
+    width: 250px;
+}
+
+
+    /* mobile nevigation */
+
+    /* Main menu positionning */
+.main-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: #FFF;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .375s;
+}
+
+.main-nav.is-open {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+}
+
+/* Yellow band effect */
+.main-nav::before {
+	 content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -15px;
+    background: #FEDC2A;
+    transform-origin: 0 0;
+    transform: skew(-14deg) translateX(-120%);
+    transition: all .275s .1s;
+}
+
+.main-nav.is-open::before {
+    transform: skew(-14deg) translateX(0);
+}
+
+/* Skewing effect on menu links */
+.main-nav ul {
+    display: inline-flex;
+    flex-direction: column;
+    height: 93%; /* Should be 100%, but we have a notice message :D */
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-18%) skew(-16deg);
+}
+
+.main-nav li {
+    display: block;
+    margin: .5rem 0;
+    text-align: right;
+    transform: skew(16deg);
+}
+
+/* Apparition effect on links */
+.main-nav a {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.main-nav.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+}
+.main-nav li:nth-child(1) a {
+	transition: all 275ms 175ms
+}
+.main-nav li:nth-child(2) a {
+	transition: all 275ms 225ms
+}
+.main-nav li:nth-child(3) a {
+	transition: all 275ms 275ms
+}
+.main-nav li:nth-child(4) a {
+	transition: all 275ms 325ms
+}
+.main-nav li:nth-child(5) a {
+	transition: all 275ms 375ms
+}
+
+
+/* Decoration */
+.main-nav ul,
+.main-nav li {
+	list-style: none;
+	padding: 0;
+}
+.main-nav a {
+	display: block;
+	padding: 12px 0;
+	color: #5A3B5D;
+	font-size: 1.4em;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
+.open-main-nav {
+	position: absolute;
+	top: 15px;
+	padding-top: 20px;
+	right: 15px;
+	z-index: 1000;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+.open-main-nav:focus {
+	outline: none;
+}
+.burger {
+	position: relative;
+	display: block;
+	width: 28px;
+	height: 4px;
+	margin: 0 auto;
+	background: #5A3B5D;
+	transform: skew(5deg);
+	transition: all .275s;
+}
+
+.burger:after,
+.burger:before {
+	content: '';
+	display: block;
+	height: 100%;
+	background: #5A3B5D;
+	transition: all .275s;
+}
+
+.burger:after {
+	transform: translateY(-12px) translateX(-2px) skew(-20deg);
+}
+
+.burger:before {
+	transform: translateY(-16px) skew(-10deg);
+}
+
+/* Toggle State part */
+.is-open .burger {
+	transform: skew(5deg) translateY(-8px) rotate(-45deg);
+}
+
+.is-open .burger:before {
+	transform: translateY(0px) skew(-10deg) rotate(75deg);
+}
+
+.is-open .burger:after {
+	transform: translateY(-12px) translateX(10px) skew(-20deg);
+    opacity: 0;
+}
+
+/* MENU Text part */
+
+.burger-text {
+	display: block;
+	font-size: .675rem;
+	letter-spacing: .05em;
+	margin-top: .5em;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-align: center;
+	color: #5A3B5D;
+}
+
+.device {
+	position: relative;
+	width: 345px;
+	height: 600px;
+	background: #FFF;
+	border: 1px solid #EEE;
+	border-radius: 3px;
+	box-shadow: 0 0 0 10px rgba(0,0,0,.1);
+}
+
+
+@media screen and (max-width: 401px) {
+.fdiv{
+	    display: block;
+        position: relative;
+		margin: 50px 0px 0px 15px;
+	
+}
+.fdiv .a{
+	margin-left:3px;
+	
+}
+.inputs{
+	margin:0px 0px;
+	background: #ffddcc;
+    border-radius: 20px;
+    opacity: 0.8;
+    transition: 0.5s;
+    height:10px;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 24px 32px;
+  
+}
+.container {
+	 display: block;
+	 
+  position: relative;
+  width: 100%;
+}
+.fsec{
+	
+	 display: block;
+        position: relative;
+	 height: 600px;
+    width: 380px;
+	
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+
+  position: absolute;
+  top: 70px;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+ 
+  background: #FF8C00;
+  color: white;
+  font-size: 16px;
+  padding: 32px 32%;
+  border:2px groove;
+  cursor: pointer;
+  border-radius: 20px;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+.container .span{
+	border-color:white;
+	color: white;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.container .btn:hover {
+   background: rgba(0,0,0,0.4); 
+   color:rgba(0,0,0,0.8);
+}
+
+.text-block {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    height: 65%;
+}
+    body {
+        font-family: Arial;
+        font-size: 17px;
+      }
+    .wrapper {
+        margin-right: 0px;
+        margin-left:15px;
+        background-color: white;
+		
+     }
+     img{
+            height: 120px;
+            width: 120px;
+            border-radius: 25px;
+            border-style: solid;
+            border-width: 1px;
+     }
+
+     .pagename2 {
+        display: block;
+        position: relative;
+        float: left;
+        margin-left: 0%;
+    }
+	.pagename {
+        display: block;
+        position: relative;
+        float: left;
+        margin-left: 12%;
+    }
+	.stars {
+		background-color: white;
+		background-image: url("star.png");
+        display: block;
+        position: absolute;
+		width:20px;
+		height:20px;
+        float: left;
+        margin-left: 1%;
+    }
+
+    .nev {
+        display: block;
+        float: right;
+        margin-top: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .text1 {
+        display: block;
+        float: left;
+        text-align: center;
+    }
+
+    } /*end of mobile design*/
+
+    @media screen and (max-width: 801px) and (min-width: 401px) {
+		
+
+        body {
+            font-family: Arial;
+            font-size: 17px;
+          }
+        .wrapper {
+            margin-right: 15px;
+            margin-left: 15px;
+            background-color: white;
+         }
+         img{
+                height: 120px;
+                width: 120px;
+                border-radius: 25px;
+                border-style: solid;
+                border-width: 1px;
+         }
+    
+         .pagename {
+            display: block;
+            float: left;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+    
+        .nev {
+            display: block;
+            float: right;
+            margin-top: 15px;
+            width: 40px;
+            height: 40px;
+        }
+    
+        } /*end of mobile design*/
+    
+    .mealbox {
+        width: 120px;
+        height: 100px;
+        display: block;
+        float: left;
+        margin: 15px;
+        background-color: white;
+        position: relative;
+        border-radius: 25px;
+        border-style: solid;
+        border-width: 1px;   
+    }

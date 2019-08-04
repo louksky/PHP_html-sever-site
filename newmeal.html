@@ -1,0 +1,81 @@
+s
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Oshri & Asaf</title>
+        <link rel="stylesheet" type="text/css" href="/style/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      </head>
+    <body class="wrapper">
+      <section class="top">
+        <div class="nev">
+            <button id="burger" class="open-main-nav">
+              <span class="burger"></span>
+              <span class="burger-text">Menu</span>
+            </button>
+            <nav class="main-nav" id="main-nav">
+              <ul>
+                <li>
+                  <a href="index.html">Browse</a>
+                </li>
+                <li>
+                  <a href="#">Recipe by prodeuct</a>
+                </li>
+                <li>
+                  <a href="#">Work</a>
+                </li>
+                <li>
+                  <a href="favi.html">Favorites</a>
+                </li>
+                <li>
+                  <a href="settings.html">Account Settings</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <h1 class="inhead">New Meal</h1>
+    </section>
+    <footer>
+		<div class="fdiv">
+      <form>
+      <a>Meal name:</a> : <br>
+      <input class="inputs" type="text" name="MealName" value="Burger"><br>
+      <a>Recipe</a>:<br>
+      <textarea class="inputs" name="MealDesc" style="width:200px; height:200px;">1 steak 
+1 tomato
+Good luck</textarea>
+      <div class="container">
+        <button onclick=" addRow()" class="btn">Create</button>
+        </div>
+      </form>
+      </div>
+	  <?php
+	//signgup
+	$servername = "localhost";
+	$username = "user";
+	$password = "password";
+	$dbname = "louk&oshri";
+
+		// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+	if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+	} 
+
+
+	$sql = "INSERT INTO product (name ,description ,instractions,imagepath ,rate )
+				VALUES ('"++"', '"++"', '"++"', '"++"' , '"++"')";
+
+	if ($conn->query($sql) === TRUE) {
+    echo "Record updated successfully";
+} 	else {
+    echo "Error updating record: " . $conn->error;
+}
+
+$conn->close();
+?>
+    </footer>
+    <script src="/script/scritps.js"></script>
+    </body>
+</html>

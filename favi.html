@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Oshri & Asaf</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style/style2.css">
+      </head>
+    <body class="wrapper">
+    <header>
+      <section class="top">
+          <div class="loginBox"><button id="Login" class="btn btn-outline-success">Login</button>
+            <button id="SignUp" class="btn btn-outline-primary" onclick="signUP()">SignUp</button></div>
+            <div class="LeftTop">
+                <div class='bold-line'></div>
+                <div class='container' id="containerID">
+                  <div class='window'>
+                    <div class='overlay'></div>
+                    <div class='content'>
+                      <div class='welcome'>Hello There!</div>
+                      <div class='subtitle'>We're almost done. Before using our services you need to create an account.</div>
+                      <div class='input-fields'>
+                        <input type='text' placeholder='Username' class='input-line full-width'></input>
+                        <input type='email' placeholder='Email' class='input-line full-width'></input>
+                        <input type='password' placeholder='Password' class='input-line full-width'></input>
+                
+                      </div>
+                      <div><button class='ghost-round full-width' onclick="signUP()">Register</button></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        <div class="nev">
+            <button id="burger" class="open-main-nav">
+              <span class="burger"></span>
+              <span class="burger-text">Menu</span>
+            </button>
+            <nav class="main-nav" id="main-nav">
+              <ul>
+                <li>
+                  <a href="index.html">Browse</a>
+                </li>
+                <li>
+                  <a href="#">Recipe by prodeuct</a>
+                </li>
+                <li>
+                  <a href="#">Work</a>
+                </li>
+                <li>
+                  <a href="favi.html">Favorites</a>
+                </li>
+                <li>
+                  <a href="settings.html">Account Settings</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="pagename"><h1>My Favorits</h1></div>
+    </section>
+  </header>
+  <section class="con">
+      <div class="mealbox"><img src="pic/pink.jpg" alt="Mushroom pink">  <div class="text-block"> 
+            <div> <img class="stars"  onclick="func()" src="pic/star.png"> </div>
+			<h4>Mushroom pink</h4>
+			</div></div>
+
+        <div class="mealbox"><img src="pic/steak.jpg" alt="steak">  <div class="text-block"> 
+			<div > <img class="stars"  onclick="func()" src="pic/star.png"> </div>           
+		   <h4>Steak</h4>
+			
+          </div></div>
+        <div class="mealbox"><img src="pic/barbunia.jpg" alt="barbunia">  <div class="text-block"> 
+            <div > <img class="stars" onclick="func()" src="pic/star.png"> </div>
+			<h4>barbunia</h4>
+          </div></div>
+        <div class="mealbox"><img src="pic/lokus.jpg" alt="lokus">  <div class="text-block"> 
+            <div > <img class="stars" onclick="func()" src="pic/star.png"> </div>
+			<h4>Loukus</h4>
+			
+          </div></div>
+		  <div class="mealbox"><img src="pic/lobster.jpg" alt="lobster">  <div class="text-block"> 
+			<div > <img class="stars"  onclick="func()" src="pic/star.png"> </div>           
+		   <h4>lobster</h4>
+			
+          </div></div>
+		  <div class="mealbox"><img src="pic/fries capp.jpg" alt="fried capps">  <div class="text-block"> 
+            <div > <img class="stars"  onclick="func()" src="pic/star.png"> </div>
+			<h4>fried capps</h4>
+			
+          </div></div>    
+        </section>
+        <footer>
+
+        </footer>
+        <script src="/script/scritps.js"></script>
+    </body>
+</html>
